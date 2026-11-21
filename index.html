@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc mừng tốt nghiệp, Dương Văn An!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #10152b;
+    }
+
+    .presentation {
+      position: relative;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      padding: 28px;
+      background:
+        radial-gradient(circle at 15% 20%, #5e3b9b 0, transparent 30%),
+        radial-gradient(circle at 85% 80%, #146b82 0, transparent 32%),
+        linear-gradient(135deg, #12162d, #20264d);
+    }
+
+    .slide {
+      display: none;
+      width: min(900px, 100%);
+      min-height: min(560px, 75vh);
+      padding: clamp(32px, 7vw, 78px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 28px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.09);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      animation: appear 0.6s ease both;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: #ffd166;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 5.8rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+    }
+
+    p {
+      max-width: 700px;
+      margin: 24px auto 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1.15rem, 3vw, 1.65rem);
+      line-height: 1.7;
+    }
+
+    .name {
+      display: block;
+      margin-top: 16px;
+      color: #ffd166;
+    }
+
+    .emoji {
+      margin-bottom: 20px;
+      font-size: clamp(3rem, 9vw, 5.5rem);
+    }
+
+    .signature {
+      margin-top: 32px;
+      color: #ffd166;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .controls {
+      position: absolute;
+      right: 0;
+      bottom: 28px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+    }
+
+    button {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1.25rem;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.12);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.35);
+      transition: all 0.2s;
+    }
+
+    .dot.active {
+      width: 26px;
+      border-radius: 8px;
+      background: #ffd166;
+    }
+
+    .hint {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.85rem;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(14px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .presentation {
+        padding: 16px;
+      }
+
+      .slide {
+        min-height: 68vh;
+        border-radius: 22px;
+      }
+
+      .controls {
+        bottom: 20px;
+      }
+
+      .hint {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="presentation">
+    <section class="slide active">
+      <div class="emoji">🎓</div>
+      <p class="eyebrow">Một cột mốc thật đáng nhớ</p>
+      <h1>Chúc mừng<br />tốt nghiệp!</h1>
+      <p class="name">Dương Văn An</p>
+    </section>
+
+    <section class="slide">
+      <div class="emoji">✨</div>
+      <p class="eyebrow">Từ người bạn cùng phòng</p>
+      <h2>Một hành trình khép lại,<br />một hành trình mới bắt đầu</h2>
+      <p>
+        Chúc mừng anh đã hoàn thành chặng đường đại học.
+        Bao nỗ lực và cố gắng hôm nay đã kết thành quả ngọt ngào!
+      </p>
+    </section>
+
+    <section class="slide">
+      <div class="emoji">💪</div>
+      <p class="eyebrow">Lời chúc gửi đến anh</p>
+      <h2>Chúc anh thật nhiều sức khỏe</h2>
+      <p>
+        Chúc anh luôn vững vàng, tự tin và đạt được thật nhiều thành công
+        trên chặng đường sắp tới.
+      </p>
+    </section>
+
+    <section class="slide">
+      <div class="emoji">😄💐</div>
+      <p class="eyebrow">Và một lời chúc đặc biệt</p>
+      <h2>Sớm có người yêu nha!</h2>
+      <p>
+        Mong anh vừa thành công trong sự nghiệp,
+        vừa sớm tìm được một cô người yêu thật dễ thương!
+      </p>
+    </section>
+
+    <section class="slide">
+      <div class="emoji">🥂🎉</div>
+      <p class="eyebrow">Chúc mừng tân cử nhân!</p>
+      <h2>Dương Văn An</h2>
+      <p>
+        Chúc anh luôn vui vẻ, may mắn và tỏa sáng trên hành trình mới.
+        Tự hào về anh!
+      </p>
+      <div class="signature">Thân gửi từ người em cùng phòng 💛</div>
+    </section>
+
+    <div class="controls">
+      <button id="prev" aria-label="Slide trước">←</button>
+      <div class="dots" id="dots" aria-label="Chọn slide"></div>
+      <button id="next" aria-label="Slide tiếp theo">→</button>
+    </div>
+
+    <div class="hint">Dùng phím ← → để chuyển slide</div>
+  </main>
+
+  <script>
+    const slides = [...document.querySelectorAll(".slide")];
+    const dotsContainer = document.getElementById("dots");
+    let currentSlide = 0;
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.className = "dot";
+      dot.addEventListener("click", () => showSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = [...dotsContainer.children];
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === currentSlide);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+      });
+    }
+
+    document.getElementById("prev").addEventListener("click", () => {
+      showSlide(currentSlide - 1);
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+      showSlide(currentSlide + 1);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") showSlide(currentSlide + 1);
+      if (event.key === "ArrowLeft") showSlide(currentSlide - 1);
+    });
+
+    setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 5000);
+  </script>
+</body>
+</html>
